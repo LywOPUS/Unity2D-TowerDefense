@@ -33,6 +33,7 @@ public class Bullet : MonoBehaviour
     {
         ChangeVision(gameObject);
         Debug.Log("haha");
+        Debug.Log("git");
         Destroy(gameObject);
     }
 
