@@ -32,6 +32,7 @@ public class Bullet : MonoBehaviour
     private void DestroySlef()
     {
         ChangeVision(gameObject);
+        Debug.Log("haha");
         Destroy(gameObject);
     }
 
