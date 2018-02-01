@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
     public int _speed;
     public List<Transform> WayPoint;
 
+    public int tower;
+
     private void Start()
     {
         _isDie = false;

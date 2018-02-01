@@ -156,6 +156,12 @@ Prefab:
       propertyPath: m_Name
       value: BuildPlace (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114518968095026822, guid: 53afe3562ee2f4329a108a4757401c07,
+        type: 2}
+      propertyPath: _tower
+      value: 
+      objectReference: {fileID: 1440978254891142, guid: dbd7932fd81874f1b8830750b192d537,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53afe3562ee2f4329a108a4757401c07, type: 2}
   m_IsPrefabParent: 0
@@ -258,6 +264,12 @@ Prefab:
       propertyPath: m_Name
       value: BuildPlace (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114518968095026822, guid: 53afe3562ee2f4329a108a4757401c07,
+        type: 2}
+      propertyPath: _tower
+      value: 
+      objectReference: {fileID: 1440978254891142, guid: dbd7932fd81874f1b8830750b192d537,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53afe3562ee2f4329a108a4757401c07, type: 2}
   m_IsPrefabParent: 0
@@ -2018,6 +2030,12 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114518968095026822, guid: 53afe3562ee2f4329a108a4757401c07,
+        type: 2}
+      propertyPath: _tower
+      value: 
+      objectReference: {fileID: 1440978254891142, guid: dbd7932fd81874f1b8830750b192d537,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 53afe3562ee2f4329a108a4757401c07, type: 2}
   m_IsPrefabParent: 0

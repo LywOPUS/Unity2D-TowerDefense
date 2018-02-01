@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 public class Tower : MonoBehaviour
 {
@@ -10,31 +11,42 @@ public class Tower : MonoBehaviour
     [SerializeField] private GameObject _bulletGameObject;
 
     [SerializeField] private GameObject _bulletTarget;
-    private Collider2D _collider2D;
+    private CircleCollider2D _collider2D;
     private List<GameObject> _enemies;
+
+    public int towerID;
 
     private void Start()
     {
-        _bulletTarget = null;
-        _enemies = new List<GameObject>();
-        _attackIntever = 0.5f;
-        _attackWaitForSeconds = new WaitForSeconds(_attackIntever);
+        Init();
         StartCoroutine(AttackEnemies(10));
+    }
+
+
+    private void Init()
+    {
+        _attackRadius = 1;
+        _attackIntever = 0.5f;
+        _collider2D = gameObject.GetComponent<CircleCollider2D>();
+        _collider2D.radius = _attackRadius;
+        _enemies = new List<GameObject>();
+        _attackWaitForSeconds = new WaitForSeconds(_attackIntever);
     }
 
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Enemy")) return;
-        Debug.Log("Attack");
+        Debug.Log(GetInstanceID() + " Attack " + other.name + " " + other.GetInstanceID());
         _bulletTarget = other.gameObject;
+        other.GetComponent<Enemy>().tower = towerID;
     }
 
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        if (other.CompareTag("Enemy"))
-            _enemies.Remove(other.gameObject);
-    }
+//    private void OnTriggerExit2D(Collider2D other)
+//    {
+//        if (other.CompareTag("Enemy"))
+//            _enemies.Remove(other.gameObject);
+//    }
 
 
     private IEnumerator AttackEnemies(int timer)
@@ -46,13 +58,14 @@ public class Tower : MonoBehaviour
             if (temp < timer)
             {
                 temp += 1;
+                yield return null;
                 continue;
             }
 
             if (_bulletTarget != null)
             {
-                Instantiate(_bulletGameObject, transform.position, Quaternion.identity);
-                _bulletGameObject.GetComponent<Bullet>()._target = _bulletTarget;
+                var bullet = Instantiate(_bulletGameObject, transform.position, Quaternion.identity);
+                bullet.GetComponent<Bullet>()._target = _bulletTarget;
             }
 
 

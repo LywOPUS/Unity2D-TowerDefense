@@ -24,7 +24,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Enemy")) return;
-        Debug.Log("Bullet Attack Enemy");
+        //Debug.Log("Bullet Attack Enemy");
         ChangeVision(other.gameObject);
         DestroySlef();
     }
@@ -44,6 +44,6 @@ public class Bullet : MonoBehaviour
     private static void ChangeVision(GameObject targetGameObject)
     {
         targetGameObject.transform.localScale = Vector3.one * 2;
-        Debug.Log("放大了！！！");
+        //Debug.Log("放大了！！！");
     }
 }
