@@ -2,23 +2,20 @@
 
 public class BuildPlace : MonoBehaviour
 {
+    private static int counter = 1;
     private bool _hasBuild;
     [SerializeField] private GameObject _tower;
-
 
 
     private void init()
     {
         _hasBuild = false;
-        
     }
 
     private void Awake()
     {
         init();
     }
-
-    private static int counter = 1;
 
     private void OnMouseUpAsButton()
     {
@@ -28,8 +25,7 @@ public class BuildPlace : MonoBehaviour
         }
         else
         {
-            GameObject tower = Instantiate(_tower, transform.position, Quaternion.identity);
-            tower.GetComponent<Tower>().towerID = counter;
+            var tower = Instantiate(_tower, transform.position, Quaternion.identity);
             counter++;
             _hasBuild = true;
         }
@@ -37,6 +33,5 @@ public class BuildPlace : MonoBehaviour
 
     private void OpenTowerMenu()
     {
-        
     }
 }
