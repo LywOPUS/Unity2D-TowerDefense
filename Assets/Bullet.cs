@@ -1,30 +1,40 @@
-﻿using UnityEngine;
+﻿using System;
+using System.Collections.Generic;
+using JetBrains.Annotations;
+using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
     public int _Speed;
 
-    //public int _Attack;
     public GameObject _target;
+
+    private int _attack;
 
     private void Start()
     {
-        // _Attack = 1;
         _Speed = 2;
-        //Vector3.Lerp(transform.position, _target, Time.deltaTime * _Speed);
-        // Invoke("DestroySlef", 3);
+    }
+
+
+    private void Init()
+    {
+        _Speed = 3;
+        _attack = 1;
     }
 
     private void Update()
     {
-        if (_target == null) return;
+        if (_target == null) 
+            return;
         Move();
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Enemy")) return;
-        //Debug.Log("Bullet Attack Enemy");
+        if (!other.CompareTag("Enemy"))
+            return;
+        other.GetComponent<Enemy>().GetDamege(_attack);
         ChangeVision(other.gameObject);
         DestroySlef();
     }
@@ -43,7 +53,7 @@ public class Bullet : MonoBehaviour
 
     private static void ChangeVision(GameObject targetGameObject)
     {
-        targetGameObject.transform.localScale = Vector3.one * 2;
+        targetGameObject.transform.localScale = Vector3.one * 1.2f;
         //Debug.Log("放大了！！！");
     }
 }

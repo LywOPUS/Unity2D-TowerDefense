@@ -5,9 +5,17 @@ public class BuildPlace : MonoBehaviour
     private bool _hasBuild;
     [SerializeField] private GameObject _tower;
 
-    private void Awake()
+
+
+    private void init()
     {
         _hasBuild = false;
+        
+    }
+
+    private void Awake()
+    {
+        init();
     }
 
     private static int counter = 1;
@@ -25,5 +33,10 @@ public class BuildPlace : MonoBehaviour
             counter++;
             _hasBuild = true;
         }
+    }
+
+    private void OpenTowerMenu()
+    {
+        
     }
 }

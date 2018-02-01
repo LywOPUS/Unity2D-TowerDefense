@@ -8,7 +8,6 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] private int _spawnRate;
     [SerializeField] private WaitForSeconds _waitTime;
     [SerializeField] private int _wave;
-    public List<Enemy> EnemyPool;
     public List<Transform> WayPont;
 
     private void Start()
@@ -22,10 +21,10 @@ public class EnemySpawner : MonoBehaviour
         while (_wave != 0)
         {
             _wave--;
-            EnemyPool.Add(Instantiate(_enemy, transform.position, Quaternion.identity));
-            _enemy.WayPoint = WayPont;
-            _enemy._currentHealth = 100;
-            _enemy._speed = 2;
+            var enemy = Instantiate(_enemy, transform.position, Quaternion.identity);
+            enemy.WayPoint = WayPont;
+            //enemy._currentHealth = 2;
+            enemy._speed = 1;
             yield return _waitTime;
         }
     }

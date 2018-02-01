@@ -45,6 +45,9 @@ TagManager:
   - name: Buiding
     uniqueID: 3653982995
     locked: 0
-  - name: enemy
+  - name: Enemy
     uniqueID: 994249545
+    locked: 0
+  - name: Foreground
+    uniqueID: 2682292643
     locked: 0

@@ -14,13 +14,20 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        _isDie = false;
-        _currentIndex = 0;
+        init();
     }
 
-    private void GetDamege(int Damege)
+    void init()
     {
-        if (_currentHealth != 0) Die();
+        _isDie = false;
+        _currentIndex = 0;
+        _currentHealth = 3;
+    }
+
+    public void GetDamege(int Damege)
+    {
+        if (_currentHealth == 0) Die();
+        Debug.Log("takeDamege");
         _currentHealth -= Damege;
     }
 
