@@ -8,17 +8,18 @@ public class Tower : MonoBehaviour
     [SerializeField] private int _attackRadius;
     private WaitForSeconds _attackWaitForSeconds;
     [SerializeField] private GameObject _bulletGameObject;
+
     [SerializeField] private GameObject _bulletTarget;
     private Collider2D _collider2D;
     private List<GameObject> _enemies;
-    private GameObject _target;
 
     private void Start()
     {
+        _bulletTarget = null;
         _enemies = new List<GameObject>();
         _attackIntever = 0.5f;
         _attackWaitForSeconds = new WaitForSeconds(_attackIntever);
-        StartCoroutine(AttackEnemies());
+        StartCoroutine(AttackEnemies(10));
     }
 
 
@@ -36,14 +37,18 @@ public class Tower : MonoBehaviour
     }
 
 
-    private IEnumerator AttackEnemies()
+    private IEnumerator AttackEnemies(int timer)
     {
-        var timer = 0;
+        var temp = 0;
+
         while (true)
         {
-            timer += 1;
-            Debug.Log(timer);
-            if (timer <= 10) continue;
+            if (temp < timer)
+            {
+                temp += 1;
+                continue;
+            }
+
             if (_bulletTarget != null)
             {
                 Instantiate(_bulletGameObject, transform.position, Quaternion.identity);
