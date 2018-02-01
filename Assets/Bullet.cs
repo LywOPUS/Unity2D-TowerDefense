@@ -13,7 +13,7 @@ public class Bullet : MonoBehaviour
 
     private void Start()
     {
-        _Speed = 2;
+        Init();
     }
 
 

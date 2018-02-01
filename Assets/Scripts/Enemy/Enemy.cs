@@ -26,8 +26,13 @@ public class Enemy : MonoBehaviour
 
     public void GetDamege(int Damege)
     {
-        if (_currentHealth == 0) Die();
-        Debug.Log("takeDamege");
+        Debug.Log("takeDamege"+ _currentHealth);
+        if (_currentHealth == 0)
+        {
+            Die();
+            return;
+        }
+
         _currentHealth -= Damege;
     }
 
@@ -40,7 +45,6 @@ public class Enemy : MonoBehaviour
     private void Move()
     {
         if (_isDie) return;
-
         Pathfind();
         var dir = (_FindPos - transform.position).normalized;
         transform.position += dir * Time.deltaTime * _speed;
@@ -57,6 +61,7 @@ public class Enemy : MonoBehaviour
     private void Attack()
     {
         if (_currentIndex == WayPoint.Count) Die();
+        
     }
 
 
