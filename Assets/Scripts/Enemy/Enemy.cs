@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using DefaultNamespace;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -12,10 +13,12 @@ public class Enemy : MonoBehaviour
 
     public int tower;
 
-    private void Start()
+    private void Awake()
     {
         init();
     }
+
+    
 
     void init()
     {
@@ -38,6 +41,7 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        Debug.Log("Die");
         _isDie = true;
         Destroy(gameObject);
     }
@@ -60,8 +64,9 @@ public class Enemy : MonoBehaviour
 
     private void Attack()
     {
-        if (_currentIndex == WayPoint.Count) Die();
-        
+        if (_currentIndex != WayPoint.Count) return;
+        GameManager.TakeDamage(10);
+        Die();
     }
 
 

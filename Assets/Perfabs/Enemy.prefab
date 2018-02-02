@@ -128,8 +128,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 971c25821be714cf1a856c421500065f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 2
   _currentHealth: 100
+  _speed: 1
   WayPoint:
   - {fileID: 0}
   - {fileID: 0}
@@ -137,6 +137,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  tower: 0
 --- !u!212 &212535028928068880
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -24,7 +24,7 @@ public class EnemySpawner : MonoBehaviour
             var enemy = Instantiate(_enemy, transform.position, Quaternion.identity);
             enemy.WayPoint = WayPont;
             //enemy._currentHealth = 2;
-            enemy._speed = 1;
+           
             yield return _waitTime;
         }
     }
