@@ -4,18 +4,13 @@ namespace DefaultNamespace
 {
     public class GameManager : MonoBehaviour
     {
-        public enum CurrentGameState
-        {
-            Start,
-            pause,
-            GameOver
-        }
-
         private static bool _isPause;
         private static int _currentHealth;
 
-        public static GameManager Instance;
+        public static GameManager Instance { get; private set; } 
 
+        
+        
         private void Awake()
         {
             Instance = this;
@@ -33,7 +28,7 @@ namespace DefaultNamespace
         }
 
 
-        public static void TakeDamage(int Damege)
+        public static void TakeDamage(int damege)
         {
             if (_currentHealth == 0)
             {
@@ -41,7 +36,7 @@ namespace DefaultNamespace
                 return;
             }
 
-            _currentHealth -= Damege;
+            _currentHealth -= damege;
         }
 
         public static bool PauseGame()
@@ -52,7 +47,11 @@ namespace DefaultNamespace
         private void Update()
         {
             if (_isPause)
+            {
                 Time.timeScale = 0;
+                Debug.Log("GameOver");
+            }
+
         }
     }
 }

@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _currentHealth: 100
-  _speed: 1
+  _speed: 3
   WayPoint:
   - {fileID: 0}
   - {fileID: 0}
