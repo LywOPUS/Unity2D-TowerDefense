@@ -7,6 +7,102 @@
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="2d-extras" t="Include">
+          <e p="Assets" t="Include">
+            <e p="Tilemap" t="Include">
+              <e p="Brushes" t="Include">
+                <e p="Coordinate Brush" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Editor" t="Include">
+                      <e p="CoordinateBrush.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="GameObject Brush" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Editor" t="Include">
+                      <e p="GameObjectBrush.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Line Brush" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Editor" t="Include">
+                      <e p="LineBrush.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Prefab Brush" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Editor" t="Include">
+                      <e p="PrefabBrush.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Random Brush" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Editor" t="Include">
+                      <e p="RandomBrush.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Tint Brush" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Editor" t="Include">
+                      <e p="TintBrush.cs" t="Include" />
+                    </e>
+                  </e>
+                </e>
+                <e p="Tint Brush Smooth" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Editor" t="Include">
+                      <e p="TintBrushSmooth.cs" t="Include" />
+                    </e>
+                    <e p="TintTextureGenerator.cs" t="Include" />
+                  </e>
+                  <e p="Shaders" t="Include">
+                    <e p="TintedTilemap.shader" t="Include" />
+                  </e>
+                </e>
+              </e>
+              <e p="GridInformation" t="Include">
+                <e p="Scripts" t="Include">
+                  <e p="GridInformation.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Tiles" t="Include">
+                <e p="Animated Tile" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="AnimatedTile.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Pipeline Tile" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="PipelineTile.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Random Tile" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="RandomTile.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Rule Tile" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="Editor" t="Include">
+                      <e p="RuleTileEditor.cs" t="Include" />
+                    </e>
+                    <e p="RuleTile.cs" t="Include" />
+                  </e>
+                </e>
+                <e p="Terrain Tile" t="Include">
+                  <e p="Scripts" t="Include">
+                    <e p="TerrainTile.cs" t="Include" />
+                  </e>
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Plugins" t="Include">
           <e p="Editor" t="Include">
             <e p="JetBrains" t="Include">
@@ -177,17 +273,17 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="BackGroundTile.cs" t="Include" />
+          <e p="BuildPlace.cs" t="Include" />
           <e p="Bullet.cs" t="Include" />
-          <e p="Enemy" t="Include">
-            <e p="Enemy.cs" t="Include" />
-            <e p="EnemySpawner.cs" t="Include" />
+          <e p="Editor" t="Include">
+            <e p="BackGroundTileEditor.cs" t="Include" />
           </e>
+          <e p="Enemy.cs" t="Include" />
+          <e p="EnemySpawner.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
-          <e p="levelinfo.cs" t="Include" />
-          <e p="Tower" t="Include">
-            <e p="BuildPlace.cs" t="Include" />
-            <e p="Tower.cs" t="Include" />
-          </e>
+          <e p="MyTilesType.cs" t="Include" />
+          <e p="Tower.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

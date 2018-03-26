@@ -123,7 +123,7 @@ MonoBehaviour:
   _bulletGameObject: {fileID: 1826037268473024, guid: 0b59de0d9131b4c3e99a6951ebd241d0,
     type: 2}
   _bulletTarget: {fileID: 0}
-  towerID: 0
+  EnemyTargetList: []
 --- !u!212 &212646554752817228
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -158,12 +158,12 @@ SpriteRenderer:
   m_SortingLayerID: -640984301
   m_SortingLayer: 1
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300050, guid: 8d2bc8df82a194e3ca812a7e1df9cba4, type: 3}
+  m_Sprite: {fileID: 21300006, guid: 01be60b457dd64b6693c507c65915254, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.86328125, y: 1.34375}
+  m_Size: {x: 1.28, y: 3.38}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
